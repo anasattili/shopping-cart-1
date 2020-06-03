@@ -1,7 +1,10 @@
 'use strict';
 // anas
 // Cart constructor.
+var productItem = ["bag.jpg", "banana.jpg", "bathroom.jpg", "boots.jpg", "breakfast.jpg", "bubblegum.jpg", "chair.jpg", "cthulhu.jpg", "dog-duck.jpg", "dragon.jpg", "pen.jpg", "pet-sweep.jpg", "scissors.jpg", "shark.jpg", "sweep.png", "tauntaun.jpg", "unicorn.jpg", "usb.gif", "water-can.jpg", "wine-glass.jpg"];
+
 var Cart = function(items) {
+  
   // this.items is an array of CartItem instances.
   this.items = items;
 };
@@ -26,8 +29,8 @@ var CartItem = function(product, quantity) {
 
 // Product contructor.
 var Product = function(filePath, name) {
-  this.filePath = filePath;
-  this.name = name;
+  this.filePath = `assets/${name}`;
+  this.name = name.split(".");
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
